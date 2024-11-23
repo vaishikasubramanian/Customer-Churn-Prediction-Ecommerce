@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="tenure">Tenure:</label>
+        <input type="number" id="tenure" name="tenure"><br><br>
+
+        <label for="city_tier">City Tier:</label>
+        <input type="number" id="city_tier" name="city_tier"><br><br>
+
+        <label for="warehouse_to_home">Warehouse To Home:</label>
+        <input type="number" id="warehouse_to_home" name="warehouse_to_home"><br><br>
+
+        <label for="hour_spend_on_app">Hour Spend On App:</label>
+        <input type="number" id="hour_spend_on_app" name="hour_spend_on_app"><br><br>
+
+        <label for="num_of_devices_registered">Number Of Devices Registered:</label>
+        <input type="number" id="num_of_devices_registered" name="num_of_devices_registered"><br><br>
+
+        <label for="satisfaction_score">Satisfaction Score:</label>
+        <input type="number" id="satisfaction_score" name="satisfaction_score" step="0.1"><br><br>
+
+        <label for="num_of_addresses">Number Of Addresses:</label>
+        <input type="number" id="num_of_addresses" name="num_of_addresses"><br><br>
+
+        <label for="complain">Complain:</label>
+        <input type="number" id="complain" name="complain"><br><br>
+
+        <label for="order_amount_hike">Order Amount Hike From Last Year:</label>
+        <input type="number" id="order_amount_hike" name="order_amount_hike" step="0.1"><br><br>
+
+        <label for="coupon_used">Coupon Used:</label>
+        <input type="number" id="coupon_used" name="coupon_used"><br><br>
+
+        <label for="order_count">Order Count:</label>
+        <input type="number" id="order_count" name="order_count"><br><br>
+
+        <label for="days_since_last_order">Days Since Last Order:</label>
+        <input type="number" id="days_since_last_order" name="days_since_last_order"><br><br>
+
+        <label for="cashback_amount">Cashback Amount:</label>
+        <input type="number" id="cashback_amount" name="cashback_amount" step="0.1"><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br><br>
+
+        <label for="preferred_login_device">Preferred Login Device:</label>
+        <select id="preferred_login_device" name="preferred_login_device">
+            <option value="computer">Computer</option>
+            <option value="mobile phone">Mobile Phone</option>
+            <option value="phone">Phone</option>
+        </select><br><br>
+
+        <label for="preferred_order_cat">Preferred Order Category:</label>
+        <select id="preferred_order_cat" name="preferred_order_cat">
+            <option value="fashion">Fashion</option>
+            <option value="grocery">Grocery</option>
+            <option value="laptop & accessory">Laptop & Accessory</option>
+            <option value="mobile">Mobile</option>
+            <option value="mobile phone">Mobile Phone</option>
+            <option value="others">Others</option>
+        </select><br><br>
+
+        <label for="preferred_payment_mode">Preferred Payment Mode:</label>
+        <select id="preferred_payment_mode" name="preferred_payment_mode">
+            <option value="cc">Credit Card</option>
+            <option value="cod">Cash on Delivery</option>
+            <option value="cash on delivery">Cash on Delivery</option>
+            <option value="credit card">Credit Card</option>
+            <option value="debit card">Debit Card</option>
+            <option value="e wallet">E Wallet</option>
+            <option value="upi">UPI</option>
+        </select><br><br>
+
+        <label for="marital_status">Marital Status:</label>
+        <select id="marital_status" name="marital_status">
+            <option value="divorced">Divorced</option>
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+        </select><br><br>
+
+        <button type="submit">Predict Churn</button>
+    </form>
+</body>
+</html>
